@@ -3,8 +3,8 @@
 Data types are divided into two groups:
 - **Primitive data types**: `byte`, `short`, `int`, `long`, `float`, `double`, `boolean`, `char`.
 - **Non-primitive data types**: `Strings`, `Arrays`, `Classes`.
-
-
+  
+  
 ## Primitive Data Types in Java
 
 Java has **8 primitive data types**:
@@ -31,3 +31,17 @@ Java has **8 primitive data types**:
 
 - `char` data type must be surrounded by single quotes. We can assing ASCII values to a `char`.
 - `String` data type must be surrounded by double quotes.
+  
+
+
+## Type Casting
+
+Type casting is when you assign a value of one primitive data type to another type.
+
+In Java, there are two types of casting:
+
+- Widening Casting (automatically) - converting a smaller type to a larger type size
+    `byte` -> `short` -> `char` -> `int` -> `long` -> `float` -> `double`
+  
+- Narrowing Casting (manually) - converting a larger type to a smaller size type
+    `double` -> `float` -> `long` -> `int` -> `char` -> `short` -> `byte` 
