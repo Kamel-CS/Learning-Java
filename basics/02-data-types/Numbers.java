@@ -11,7 +11,7 @@ public class Numbers {
 
         // floating point types
         float f = 3.14f;
-        double d = 19.99d;
+        double d = 19.99d;    // this is optional
 
         // Scientific notation, e indicates power of 10
         float f1 = 214e3f;
