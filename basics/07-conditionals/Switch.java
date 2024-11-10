@@ -33,6 +33,7 @@ public class Switch {
                 break;
             default:
                 day = "Invalid input! Please enter a number between 1 and 7.";
+                break;    // optional but good practice
         }
 
         System.out.println("The day of the week is: " + day);
