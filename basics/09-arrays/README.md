@@ -4,7 +4,7 @@
 Arrays are:
 - **Indexed**: starting from 0.
 - **Homegenous**: all elements are of the same type.
-- **Fixed size*: set at creation and can't be modified.
+- **Fixed size**: set at creation and can't be modified.
 ---
 
 ## Declaration and Initialization
