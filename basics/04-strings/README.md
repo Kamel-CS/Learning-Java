@@ -40,3 +40,23 @@ Java use the `+` operator for both addition and concatenation.
 | `\t`             | Tab                                         |
 | `\b`             | Backspace                                   |
 | `\f`             | Form feed                                   |
+
+---
+
+## String Immutability in Java
+
+In Java, `String` objects are **immutable**. Once a string is created, its value cannot be changed. Any operation that appears to modify a string will actually create a new string object.
+
+### Why Strings Are Immutable:
+1. **Thread Safety**: Immutable objects are safe to use in multi-threaded environments.
+2. **Security**: Prevents accidental modification or tampering.
+3. **Performance**: Enables caching and reuse of string objects.
+
+### Example:
+```java
+String str = "Hello";
+String modifiedStr = str.concat(", World!");
+
+// Original string remains unchanged
+System.out.println("Original: " + str);        // Output: Hello
+System.out.println("Modified: " + modifiedStr); // Output: Hello, World!
