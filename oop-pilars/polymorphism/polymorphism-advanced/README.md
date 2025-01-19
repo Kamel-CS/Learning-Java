@@ -57,3 +57,22 @@ Creation of an orange of 80 grams
 It is an apple
 It's an Orange
 ```
+
+### 5. Using `instanceof` and Downcasting
+In some cases, you may want to invoke subclass-specific methods that are not part of the parent class.
+The instanceof operator is used to check the object type, and downcasting is done to call subclass-specific methods.
+
+Example:
+```java
+for (Fruit fruit : fruits) {
+    fruit.display();  // Calls the overridden `display` method specific to the object type
+    if (fruit instanceof Apple) {
+        // Downcast to Apple to call displayWeight
+        ((Apple) fruit).displayWeight();
+    } else {
+        // Downcast to Orange to call displayWeight
+        ((Orange) fruit).displayWeight();
+    }
+}
+```
+This approach explicitly checks the type of each fruit in the array and calls the appropriate method (`displayWeight`) for each subclass (`Apple` or `Orange`).

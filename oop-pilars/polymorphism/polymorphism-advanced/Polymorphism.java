@@ -75,9 +75,19 @@ class Polymorphism {
         fruits[1] = new Orange(80);
         fruits[2] = new Apple(95);
 
-        // Iterate through the array and call the display method
-        for (Fruit fruit : fruits) {
-            fruit.display();  // Calls the subclass-specific display method
+// Iterate through the array and call the display method
+    for (Fruit fruit : fruits) {
+        // Calls the overridden `display` method specific to the actual object type (Apple or Orange)
+        fruit.display();  
+
+        // Check the type of fruit using `instanceof` to determine whether it's an Apple or an Orange
+        if (fruit instanceof Apple) {
+            // Downcast to Apple to access the Apple-specific method displayWeight
+            ((Apple) fruit).displayWeight();  
+        } else {
+            // Downcast to Orange to access the Orange-specific method displayWeight
+            ((Orange) fruit).displayWeight();  
         }
+    }
     }
 }
