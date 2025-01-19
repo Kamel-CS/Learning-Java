@@ -24,7 +24,7 @@ public interface Shape {
         System.out.println("This is a private method, used internally in the interface.");
     }
 
-    // Public method that uses the private method
+    // default method that uses the private method
     default void demonstratePrivateMethod() {
         System.out.println("Calling the private method from a default method:");
         helperMethod();
