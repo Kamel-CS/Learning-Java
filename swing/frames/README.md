@@ -31,21 +31,36 @@ This is useful for creating reusable components or adding custom functionality t
 | `add(Component comp)` | Adds a component to the frame |
 | `remove(Component comp)` | Removes a component from the frame |
 | `getContentPane()` | Returns the content pane of the frame |
+|`getImage()`| Returns Image from the `ImageIcon` |
 | `pack()` | Sizes the frame to fit its components |
 
-- `setDefaultCloseOperation(int operation)`:
+---
+
+### Key Notes
+
+#### Default Close Operations
+
   - `HIDE_ON_CLOSE`. Default
   - `EXIT_ON_CLOSE`.
   - `DO_NOTHING_ON_CLOSE`.
 
-- `setIconImage()`:
-Must create an `ImageIcon` first:
-```java
-import javax.swing.ImageIcon;
+#### Set an Image Icon
 
-ImageIcon myImageIcon = new ImageIcon("Path/to/my/image");
-frame.setIconImage(myImageIcon.getImage())  // it takes Image not ImageIcon
+The `setIconImage(Image image)` expects an `Image` object, not an `ImageIcon`.
+  - Create an `ImageIcon` and then extract the `Image` from it.
+
+Compact Verstion of the code:
+```java
+this.setIconImage(new ImageIcon("./github_logo.png").getImage());
 ```
+This is useful to avoid potential issues.
+
+#### Using `getContentPane()`
+
+JFrame consists of multiple layers. UI components like buttons and panels are added to the content pane, not the frame itself.
+
+  - `frame.getContentPane().setBackground(...)` ensures the background color applies correctly.
+
 ---
 
 ## Next Step
