@@ -24,19 +24,21 @@ public class Main {
         label.setText("Hello, World!");
         label.setIcon(icon);
 
-        label.setHorizontalTextPosition(JLabel.CENTER);         // LEFT (default), CENTER, RIGHT
-        label.setVerticalTextPosition(JLabel.TOP);              // TOP, CENTER (default), BOTTOM
+        label.setHorizontalTextPosition(JLabel.CENTER);         // set Text LEFT (default), CENTER, RIGHT of ImageIcon
+        label.setVerticalTextPosition(JLabel.TOP);              // set Text TOP, CENTER (default), BOTTOM of ImageIcon
+        label.setIconTextGap(20);                               // gap between icon and text
+        
         label.setForeground(new Color(0, 255, 0));               // change text color
         label.setFont(new Font("Iosevka", Font.ITALIC, 20));    // change font style, size
-        label.setIconTextGap(20);                               // gap between icon and text
 
-        label.setBackground(Color.BLACK);                // change background color of the label (hex, rgb, Color.colorname)
-        label.setOpaque(true);                           // set to true to see the background color
+        label.setBackground(Color.BLACK);            // change background color of the label (hex, rgb, Color.colorname)
+        label.setOpaque(true);                       // set to true to see the background color
 
-        label.setBorder(border);                         // set the border
+        label.setBorder(border);                     // set the border
         
-        label.setVerticalAlignment(JLabel.CENTER);       // TOP, CENTER , BOTTOM
-        label.setHorizontalAlignment(JLabel.CENTER);     // LEFT, CENTER, RIGHT
+        // Set position of label withing the frame
+        label.setHorizontalAlignment(JLabel.CENTER);     // TOP, CENTER , BOTTOM (also relative to text)
+        label.setVerticalAlignment(JLabel.CENTER);       // LEFT, CENTER, RIGHT (also relative to text)
         
         JFrame frame = new JFrame();
         frame.setTitle("My First GUI");

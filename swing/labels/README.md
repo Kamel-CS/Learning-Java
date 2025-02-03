@@ -30,13 +30,16 @@ A JLabel object can display either text, an image, or both.
 | `setBorder(Border border)` | Sets the border of the label. |
 | `getBorder()` | Returns the border of the label. |
 
+---
 
-- **`int alignment`** can be one of the following:
-  - `SwingConstants.LEFT`
-  - `SwingConstants.CENTER`
-  - `SwingConstants.RIGHT`
-    
-Or to be accessed using:
-  - `JLabel.LEFT` 
-  - `JLabel.CENTER` 
-  - `JLabel.RIGHT`
+### Key Notes
+
+#### Labels Fits the Frame
+
+A label will take all the space of the empty space of the frame, making its size equals to the empty space in the frame.
+This behaviour is caused by the **default layer manager** that we're using. So to Specify the borders:
+
+```java
+frame.setLayout(null);  // by default it's BorderLayout
+label.bounce(int x, int y, int width, int height);
+```
