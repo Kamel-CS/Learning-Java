@@ -68,13 +68,25 @@ public class HashMaps {
         System.out.println("Contains key Person1? " + personJobMap.containsKey(person1)); // Output: true
         System.out.println("Contains value 'Accountant'? " + personJobMap.containsValue("Accountant")); // Output: true
 
-        // 5. Iterate over the HashMap to display all key-value pairs
+        // 5. Print only the keys
+        System.out.println("\nAll keys:");
+        for (Person person : personJobMap.keySet()) {
+            System.out.println(person);
+        }
+
+        // 6. Print only the values
+        System.out.println("\nAll values:");
+        for (String job : personJobMap.values()) {
+            System.out.println(job);
+        }
+
+        // 7. Iterate over the HashMap to display all key-value pairs
         System.out.println("\nAll key-value pairs:");
         for (Map.Entry<Person, String> entry : personJobMap.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
 
-        // 6. Check the size of the HashMap and clear it
+        // 8. Check the size of the HashMap and clear it
         System.out.println("\nSize of HashMap: " + personJobMap.size()); // Output: 4
         personJobMap.clear(); // Clear the HashMap
         System.out.println("Size after clearing: " + personJobMap.size()); // Output: 0

@@ -14,15 +14,29 @@ It stores data in key-value pairs, where each key is unique. HashMaps provide fa
 
 ---
 
-## Key Methods
+## Methods Used
 
-| **Operation**            | **Method**                          | **Worst-Case Time Complexity** |
-|--------------------------|-------------------------------------|--------------------------------|
-| **Add/Update**           | `put(K key, V value)`              | O(n)                           |
-| **Retrieve**             | `get(Object key)`                  | O(n)                           |
-| **Remove**               | `remove(Object key)`               | O(n)                           |
-| **Check for Key**        | `containsKey(Object key)`          | O(n)                           |
-| **Check for Value**      | `containsValue(Object value)`      | O(n)                           |
-| **Iterate**              | `keySet()`, `values()`, `entrySet()` | O(n)                         |
-| **Size**                 | `size()`                           | O(1)                           |
-| **Clear**                | `clear()`                          | O(n)                           |
+### 1. **Adding Elements**
+- **`put(K key, V value)`**: Adds a key-value pair to the `HashMap`. If the key already exists, the value is updated.
+
+### 2. **Retrieving Elements**
+- **`get(Object key)`**: Returns the value associated with the specified key, or `null` if the key is not found.
+- **`getOrDefault(Object key, V defaultValue)`**: Returns the value for the specified key, or a default value if the key is not found.
+
+### 3. **Removing Elements**
+- **`remove(Object key)`**: Removes the key-value pair for the specified key.
+- **`remove(Object key, Object value)`**: Removes the key-value pair only if the key is mapped to the specified value.
+
+### 4. **Checking for Keys and Values**
+- **`containsKey(Object key)`**: Returns `true` if the `HashMap` contains the specified key.
+- **`containsValue(Object value)`**: Returns `true` if the `HashMap` contains the specified value.
+
+### 5. **Iterating Over the HashMap**
+- **`keySet()`**: Returns a set of all keys in the `HashMap`.
+- **`values()`**: Returns a collection of all values in the `HashMap`.
+- **`entrySet()`**: Returns a set of all key-value pairs in the `HashMap`.
+
+### 6. **Other Useful Methods**
+- **`size()`**: Returns the number of key-value pairs in the `HashMap`.
+- **`isEmpty()`**: Returns `true` if the `HashMap` is empty.
+- **`clear()`**: Removes all key-value pairs from the `HashMap`.
