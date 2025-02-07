@@ -1,8 +1,11 @@
 public class Random {
     public static void main (String[] args) {
 
-        int randomNum = (int) (Math.random() * 11);
+        final int min = 1;
+        final int max = 10;
 
-        System.out.println("Random number between 0 and 10: " + randomNum);
+        int randomNum = (int) (Math.random() * (max - min + 1)) + min;
+
+        System.out.println("Random number between " + min + " and " + max + ": " + randomNum);
     }
 }
