@@ -1,6 +1,6 @@
 # FlowLayout in Swing
 
-## Overview*
+## Overview
 `FlowLayout` arranges components in a row, wrapping them to the next line if needed. Each component is given its **preferred size**.  
 
 By default, it:  
